@@ -321,7 +321,7 @@ console.log("Estos son los elementos del array que no son impares", listaNumeros
 
 
 /*
-BUBLES O LOOPS
+BUCLES O LOOPS
 
 En JS, los bucles o loops son utilizados para realizar tareas repetitivas con base en una condicion. 
 Las condiciones normalmente devuelven un true o false al ser evaluadas, ademas de que el bucle continuara 
@@ -357,8 +357,8 @@ tenemos otras sentencias más especificas
 
 let numeroIncial = 1;
 let valorLimite = prompt("Hola, por favor ingresa un nuúmero entero positivo que sea el limite");;
+
 while(numeroIncial <= valorLimite){ //mientras el numero inciial sea menor o igual al limite, ejecutamos lo de abajo
-    
     //si al dividir el numero inicial entre 2, el residuo es diferente a 0 (es impar)...
     if(numeroIncial % 2 != 0){
         console.log(numeroIncial); //imprimirmos el valor de la variable
@@ -366,9 +366,19 @@ while(numeroIncial <= valorLimite){ //mientras el numero inciial sea menor o igu
     numeroIncial++; //incrementamos de uno en uno nuestra variable
 }
 
-/* TAREA PRUEBA DE ESCRITORIO 
+/*TAREA PRUEBA DE ESCRITORIO
 
-El bucle  do while nos sirve para ejecutar una sentencia especificada
+numInicial=1
+imprime en pantalla el prompt y recibe el valorLimite=4
+mientras 4 sea menor o igual a 4 ejecutar
+si el residuo de 4%2 es diferente de 0 imprimir 1
+termina el if
+se incrementa numeroInicial a 5
+termina el while
+
+*/
+
+/* El bucle  do while nos sirve para ejecutar una sentencia especificada
 hasta que la condición de aprobación se evalua como falsa.
 La condición se evalua despues de ejecutar la sentencia, dando como resultado
 que la sentencia especificada se ejecuta al menos una vez.
