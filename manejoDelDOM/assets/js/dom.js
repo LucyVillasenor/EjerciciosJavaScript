@@ -148,7 +148,8 @@ parrafo.outerHTML;
 /*
 INSERTAR ELEMENTOS
 
-Son metodos que nos permiten poner la informacion que estaba en una memoria virtual de forma visual en nuestro documento
+Son metodos que nos permiten poner la informacion que estaba 
+en una memoria virtual de forma visual en nuestro documento
 
     - .appendChild()
     - .remove
@@ -163,19 +164,17 @@ appendImg.src = "https://cdns-images.dzcdn.net/images/artist/098ea0886f463cf48b7
 appendImg.alt = "Imagen sorpresa";
 
 document.body.appendChild(appendImg);
+/*Explicacion: Primero creamos un elemento (etiqueta) llamada img (existe de forma virtual), 
+le agregamos atributos como src y alt, y por ultimo conectamos al DOM usando el appendChild sobre nuestro document.body*/
+
+//Investigar remover child, replacer child y otras formas de agregarlos (antes, adyacente, a un lado, etc.).
 
 const appenParrado = document.createElement("p");
 appenParrado.innerHTML=("Hola, psy un parrafo hijo ");
 
 document.body.appendChild(appenParrado);
-//Explicacion: Primero creamos un elemento (etiqueta) llamada img (existe de forma virtual), le agregamos atributos como src y alt, y por ultimo conectamos al DOM usando el appendChild sobre nuestro document.body
-
-//Investigar remover child, replacer child y otras formas de agregarlos (antes, adyacente, a un lado, etc.).
-
-
-//.remove
-const borrar = document.querySelector("#parrafo4");
-encabezado.remove();
+const borrar = document.querySelector("#parrafo4");// borrar.remove();
+borrar.remove();
 
 //lo mismo pero manera refactorizada
 const borrarRefactorizado = document.querySelector("#parrafo4").remove();
@@ -223,20 +222,23 @@ Algunos de los eventos mas comunes son:
 
 - Eventos mediante el DOM (HTML + JS) (mas o menos una mala practica)
    Es una forma alternativa de gestionar eventos, creando HTML desde la API DOM (pero es una trampoa porque seguimos suando HTML para el uso del botón)
+ 
+   En lugar de agregar el atributo onclick al botón, lo localizamos mediante un querySelector. 
+   Luego le asignamos una función con el código deseado, en este caso, una alerta.
 
-En lugar de agregar el atributo onclick al botón, lo localizamos mediante un querySelector. Luego le asignamos una función con el código deseado, en este caso, una alerta.
+        //Eventos desde el JS (trampa)
+        const button = document.querySelector(".botonSaludo");
+        button.onclick = function(){
+        alert("Hola desde el JS");
+        }
 
-//Eventos desde el JS (trampa)
-const button = document.querySelector(".botonSaludo");
-button.onclick = function(){
-    alert("Hola desde el JS");
-}
+-EventListener (buena practica)
 
-- EventListener (buena practica)
+Permite agregar una escucha del evento indicado (primer parámetro), y en el caso de que ocurra, 
+se ejecuta la función asociada indicada (segundo parámetro).
 
-Permite agregar una escucha del evento indicado (primer parámetro), y en el caso de que ocurra, se ejecuta la función asociada indicada (segundo parámetro).
-
-.addEventListener(evento, function);
+    Sintaxis:
+    .addEventListener(evento, function);
 
 */
 
